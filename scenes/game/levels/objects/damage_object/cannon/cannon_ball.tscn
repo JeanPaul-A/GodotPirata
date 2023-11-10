@@ -50,6 +50,7 @@ animations = [{
 }]
 
 [node name="CannonBall" type="RigidBody2D" groups=["cannon_ball"]]
+gravity_scale = 0.0
 max_contacts_reported = 1
 contact_monitor = true
 lock_rotation = true

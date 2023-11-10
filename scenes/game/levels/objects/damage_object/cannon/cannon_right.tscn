@@ -235,7 +235,7 @@ animation = &"inactive"
 position = Vector2(24, 0)
 scale = Vector2(-2, 2)
 sprite_frames = SubResource("SpriteFrames_otl86")
-animation = &"charging"
+animation = &"inactive"
 offset = Vector2(-7, 0)
 
 [node name="Node2D" type="Node2D" parent="AnimatedAiming"]

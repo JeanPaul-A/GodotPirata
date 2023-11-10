@@ -202,6 +202,7 @@ animations = [{
 
 [node name="Cannon" type="RigidBody2D" groups=["cannon"]]
 mass = 1000.0
+gravity_scale = 0.0
 script = ExtResource("1_t2rj5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -303,7 +303,9 @@ moving_direction = "right"
 
 [node name="Cannon" parent="." instance=ExtResource("19_msljc")]
 position = Vector2(783, 211)
+view_direction = 0.0
 free_bombs = true
+enemy_controlling = true
 
 [node name="Bombs" type="Node2D" parent="Cannon"]
 position = Vector2(30, 0)
@@ -358,7 +360,7 @@ position = Vector2(808, 208)
 position = Vector2(1149, 460)
 
 [node name="MainCharacter" parent="." instance=ExtResource("15_ooixx")]
-position = Vector2(856, 240)
+position = Vector2(128, 536)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_0t8t3")
@@ -378,7 +380,7 @@ layer_1/tile_data = PackedInt32Array(917523, 2, 0, 983059, 2, 1, 917518, 2, 0, 9
 limit_left = 65
 limit_top = 50
 limit_right = 1540
-limit_bottom = 560
+limit_bottom = 600
 character = NodePath("../MainCharacter")
 
 [node name="PowerUp" parent="." instance=ExtResource("22_vr6n4")]

@@ -61,10 +61,11 @@ func _on_animated_sprite_2d_frame_changed():
 			
 		# Aplicar impulso a la bala de cañón
 		# //El valor de multiplicación afecta la velocidad
-		new_ball.apply_impulse(direction.normalized() * 500)
+		if enemy_controlling:
+			new_ball.apply_impulse(direction.normalized() * 1000)
 		if(impulse != 0):
 			direction = get_direction(aiming_position.global_position, self.global_position)
-			new_ball.apply_impulse(direction.normalized() * (impulse * 250 * view_direction * cannon_boss))
+			new_ball.apply_impulse(direction.normalized() * 750)
 		impulse = 0
 		
 		# Agregamos la bala a la escena
@@ -98,7 +99,7 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("enemy_basic"):
 		enemy_controlling = true
 
-var enemy_controlling = true
+@export var enemy_controlling = false
 func _on_area_2d_body_exited(body):
 	if(body.is_in_group("player")):
 		character_in_area = false
@@ -128,14 +129,20 @@ func _input(event):
 
 func _process(delta):
 	if Input.is_action_pressed("up"):
-		if animated_aiming.rotation_degrees < 45:
-			if view_direction < 0:
+		if view_direction < 0:
+			if animated_aiming.rotation_degrees < 45:
+				print("UP1")
 				animated_aiming.rotation_degrees += 50 * delta
-			else:
+		else:			
+			if animated_aiming.rotation_degrees < 45:
+				print("UP2")
 				animated_aiming.rotation_degrees -= 50 * delta
 	if Input.is_action_pressed("down"):
-		if animated_aiming.rotation_degrees > -45:
-			if view_direction < 0:
+		if view_direction < 0:
+			if animated_aiming.rotation_degrees > -45:
+				print("DOWN1")
 				animated_aiming.rotation_degrees -= 50 * delta
-			else:
+		else:			
+			if animated_aiming.rotation_degrees < 45:
+				print("DOWN2")
 				animated_aiming.rotation_degrees += 50 * delta

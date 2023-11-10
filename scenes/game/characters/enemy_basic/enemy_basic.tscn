@@ -7,7 +7,7 @@
 size = Vector2(20, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itcpf"]
-size = Vector2(56, 45)
+size = Vector2(48, 29)
 
 [node name="Enemy_basic" type="RigidBody2D" groups=["enemy_basic"]]
 disable_mode = 1
@@ -29,7 +29,7 @@ shape = SubResource("RectangleShape2D_htxxh")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-4, -9.5)
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_itcpf")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
