@@ -34,7 +34,6 @@ var _index_number_0 = 17
 @onready var point_group = $PointGroup
 @onready var bomb_group = $LifeBar/Bomb
 
-
 # Función de inicialización
 func _ready():
 	self.visible = false
@@ -66,8 +65,12 @@ func add_points(type: String, value: int, group = null):
 		_number_3 = group.find_child("Number3")
 		# Guardamos la puntuación correspondiente
 		points[type] += value
-		_set_points(points[type])
+		_set_points(points[type])			
+	
 
+func get_bombs():
+	var bomb_total = points["Bomb"]
+	return bomb_total
 
 # Permite sumar o restar la cantidad de bombas disponibles
 func add_bomb(value: int):

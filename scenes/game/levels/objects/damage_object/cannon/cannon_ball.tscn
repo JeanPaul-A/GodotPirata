@@ -49,7 +49,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CannonBall" type="RigidBody2D"]
+[node name="CannonBall" type="RigidBody2D" groups=["cannon_ball"]]
 max_contacts_reported = 1
 contact_monitor = true
 lock_rotation = true

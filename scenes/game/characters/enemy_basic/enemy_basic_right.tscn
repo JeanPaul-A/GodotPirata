@@ -1,35 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://djh6m7xyvfkn"]
+[gd_scene load_steps=5 format=3 uid="uid://cn2fmvja8hi6u"]
 
-[ext_resource type="Script" path="res://scenes/game/characters/enemy_basic/enemy_basic.gd" id="1_ugspk"]
-[ext_resource type="SpriteFrames" uid="uid://cyxbgbqxhnour" path="res://assets/sprites/animations/enemy_cannon/new_sprite_ground.tres" id="2_0meik"]
+[ext_resource type="Script" path="res://scenes/game/characters/enemy_basic/enemy_basic.gd" id="1_pjmr4"]
+[ext_resource type="SpriteFrames" uid="uid://cyxbgbqxhnour" path="res://assets/sprites/animations/enemy_cannon/new_sprite_ground.tres" id="2_u3wjm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htxxh"]
 size = Vector2(20, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itcpf"]
-size = Vector2(56, 45)
+size = Vector2(32, 21)
 
-[node name="Enemy_basic" type="RigidBody2D" groups=["enemy_basic"]]
+[node name="Enemy_basic" type="RigidBody2D"]
 disable_mode = 1
 gravity_scale = 0.0
 max_contacts_reported = 1
 contact_monitor = true
 lock_rotation = true
-script = ExtResource("1_ugspk")
+script = ExtResource("1_pjmr4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(-0.5, 0.5)
-sprite_frames = ExtResource("2_0meik")
+sprite_frames = ExtResource("2_u3wjm")
 animation = &"ground"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 4)
 shape = SubResource("RectangleShape2D_htxxh")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-16, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-4, -9.5)
+position = Vector2(8, 2.5)
 shape = SubResource("RectangleShape2D_itcpf")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

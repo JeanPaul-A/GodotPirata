@@ -1,0 +1,248 @@
+[gd_scene load_steps=36 format=3 uid="uid://cpjk0q88x0wo1"]
+
+[ext_resource type="Script" path="res://scenes/game/levels/objects/damage_object/cannon/cannon.gd" id="1_4xuly"]
+[ext_resource type="Texture2D" uid="uid://bi173vfx1xywa" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire/1.png" id="2_ynmn5"]
+[ext_resource type="Texture2D" uid="uid://dx7mk5m5gj8fn" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire/2.png" id="3_lsal3"]
+[ext_resource type="Texture2D" uid="uid://oaykh7x3qa2t" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire/3.png" id="4_qetpv"]
+[ext_resource type="Texture2D" uid="uid://1gkyvjygb0rs" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire/4.png" id="5_35t4i"]
+[ext_resource type="Texture2D" uid="uid://bakbtemngbbce" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire/5.png" id="6_0ucvw"]
+[ext_resource type="Texture2D" uid="uid://mi8t4mtlm4tq" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire/6.png" id="7_7xr5n"]
+[ext_resource type="Texture2D" uid="uid://bb4hccofvwe3x" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_hit/1.png" id="8_0vmow"]
+[ext_resource type="Texture2D" uid="uid://docejptn7mf5s" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_hit/2.png" id="9_ai4ir"]
+[ext_resource type="Texture2D" uid="uid://dlgms8bbptic1" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_hit/3.png" id="10_72gx7"]
+[ext_resource type="Texture2D" uid="uid://c8ml72h6eandi" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_hit/4.png" id="11_4s1lo"]
+[ext_resource type="Texture2D" uid="uid://1c2x1eybvkk3" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_idle/1.png" id="12_ddoj4"]
+[ext_resource type="Texture2D" uid="uid://b6r22txxtcslw" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire_effect/1.png" id="13_pg0dm"]
+[ext_resource type="Texture2D" uid="uid://bajc02rl7qd6" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire_effect/2.png" id="14_4t5v6"]
+[ext_resource type="Texture2D" uid="uid://cspsvvvqdblxt" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire_effect/3.png" id="15_b01oa"]
+[ext_resource type="Texture2D" uid="uid://cj10crvyo2oif" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire_effect/4.png" id="16_evsy1"]
+[ext_resource type="Texture2D" uid="uid://bpfdf0fm10aws" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire_effect/5.png" id="17_77w52"]
+[ext_resource type="Texture2D" uid="uid://bkd4sw67xn25y" path="res://assets/sprites/treasure_hunters/shooter_traps/sprites/cannon/cannon_fire_effect/6.png" id="18_vmlls"]
+[ext_resource type="Texture2D" uid="uid://6w0a1iby6gkt" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/interaction/interaction_in_03.png" id="21_kbwd8"]
+[ext_resource type="Texture2D" uid="uid://cejmxwhlgfa0g" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/interaction/interaction_in_01.png" id="22_sjfby"]
+[ext_resource type="Texture2D" uid="uid://382fw7e7yvjk" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/interaction/interaction_in_02.png" id="23_gna3f"]
+[ext_resource type="Texture2D" uid="uid://lp3wge4qatlh" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/interaction/interaction_out_01.png" id="24_oylrm"]
+[ext_resource type="Texture2D" uid="uid://buf7ijq1v3vgg" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/interaction/interaction_out_02.png" id="25_a1l6n"]
+[ext_resource type="Texture2D" uid="uid://bfcy11gew8tx2" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/aiming/aiming_0.png" id="26_8otv6"]
+[ext_resource type="Texture2D" uid="uid://dnejpksbslsb5" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/aiming/aiming_1.png" id="27_rrc53"]
+[ext_resource type="Texture2D" uid="uid://bl6r0rsxi7fya" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/aiming/aiming_2.png" id="28_akt2o"]
+[ext_resource type="Texture2D" uid="uid://cmrthiq23pkua" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/aiming/aiming_3.png" id="29_4fcig"]
+[ext_resource type="Texture2D" uid="uid://bd0lgo37sh3hr" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/aiming/aiming_4.png" id="30_fix0y"]
+[ext_resource type="Texture2D" uid="uid://btxiibehgdjsw" path="res://assets/sprites/treasure_hunters/captain_clown_nose/sprites/dialogue/aiming/aiming_5.png" id="31_w6od6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktbri"]
+size = Vector2(28, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h5nvd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ynmn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lsal3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qetpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_35t4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0ucvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7xr5n")
+}],
+"loop": false,
+"name": &"fire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0vmow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ai4ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_72gx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4s1lo")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ddoj4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tmb21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_pg0dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4t5v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_b01oa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_evsy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_77w52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vmlls")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"fire_effect",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrgu5"]
+size = Vector2(8, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s6p2r"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_kbwd8")
+}],
+"loop": true,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_sjfby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_gna3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kbwd8")
+}],
+"loop": true,
+"name": &"in",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_sjfby")
+}],
+"loop": true,
+"name": &"inactive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_oylrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_a1l6n")
+}],
+"loop": true,
+"name": &"out",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otl86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_8otv6")
+}],
+"loop": true,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_8otv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_rrc53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_akt2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4fcig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_fix0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_w6od6")
+}],
+"loop": true,
+"name": &"charging",
+"speed": 3.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"inactive",
+"speed": 5.0
+}]
+
+[node name="Cannon" type="RigidBody2D" groups=["cannon"]]
+mass = 1000.0
+script = ExtResource("1_4xuly")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ktbri")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h5nvd")
+animation = &"idle"
+flip_h = true
+
+[node name="AnimatedSprite2DEffects" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, -1)
+sprite_frames = SubResource("SpriteFrames_tmb21")
+animation = &"fire_effect"
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-40, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(20, 0)
+shape = SubResource("RectangleShape2D_mrgu5")
+
+[node name="AnimatedInteraction" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_s6p2r")
+animation = &"inactive"
+
+[node name="AnimatedAiming" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, 0)
+scale = Vector2(-2, 2)
+sprite_frames = SubResource("SpriteFrames_otl86")
+animation = &"charging"
+offset = Vector2(-7, 0)
+
+[node name="Node2D" type="Node2D" parent="AnimatedAiming"]
+position = Vector2(-16, 0)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="animation_finished" from="AnimatedInteraction" to="." method="_on_animated_interaction_animation_finished"]

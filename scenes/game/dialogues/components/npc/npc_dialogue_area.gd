@@ -38,10 +38,6 @@ var _in_dialogue = false
 func _ready():
 	# Inicialización del diálogo
 	talk.connect(_show_dialogue)
-	area.body_entered.connect(_body_entered)
-	if !area_listen:
-		area_listen = area
-	area_listen.body_exited.connect(_body_exited)
 
 
 func _unhandled_input(event):
@@ -108,9 +104,10 @@ func on_response_selected(fn):
 
 
 # Detectamos cuando un "cuerpo" entra en contacto con el NPC
-func _body_entered(body):
+func _on_area_2d_body_entered(body):
 	# Validamos si la colisión es con el personaje principal
 	if body.is_in_group("player"):
+		print("TASD")
 		# Accedemos al script
 		character = body.get_node("MainCharacterMovement")
 		# Mostramos el diálogo (solo si no tenemos una "tecla" para activarlo)
@@ -129,3 +126,5 @@ func _body_entered(body):
 func _body_exited(_body):
 	character = null
 	_in_dialogue = false
+
+

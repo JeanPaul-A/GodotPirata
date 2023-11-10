@@ -214,7 +214,6 @@ texture = ExtResource("11_4ker5")
 position = Vector2(231, 669)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.1, 0.1)

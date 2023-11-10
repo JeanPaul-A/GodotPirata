@@ -13,8 +13,10 @@ func _process(delta):
 var character_in_range = false
 
 func _on_area_2d_body_entered(body):
-	if(body.is_in_group("player")):
+	if(body.is_in_group("player")):		
 		character_in_range = true
+	if body.is_in_group("cannon_ball"):
+		self.queue_free()
 
 func _on_area_2d_body_exited(body):
 	if(body.is_in_group("player")):
