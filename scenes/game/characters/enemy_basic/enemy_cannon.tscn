@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://5ydf0hq3r3rp"]
+
+[ext_resource type="SpriteFrames" uid="uid://cyxbgbqxhnour" path="res://assets/sprites/animations/enemy_cannon/new_sprite_ground.tres" id="1_u6kqh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7n1f"]
+size = Vector2(40, 52)
+
+[node name="Enemy_cannon" type="CharacterBody2D"]
+scale = Vector2(-0.5, 0.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_u6kqh")
+animation = &"ground"
+frame_progress = 0.487435
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 6)
+shape = SubResource("RectangleShape2D_n7n1f")
